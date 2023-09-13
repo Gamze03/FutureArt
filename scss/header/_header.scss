@@ -1,0 +1,180 @@
+header {
+    width: 100%;
+
+    .general-header {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .row {
+                width: 100%;
+
+            }
+
+            .col-10 {
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .col-2 {
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                padding: 0;
+
+
+
+                .header-logo {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    max-width: 115px;
+
+                    & img {
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+
+
+
+        }
+
+        .right-wrapper {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .top {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding: 10px 0;
+                border-bottom: 1px solid var(--black-1);
+
+                .social-icons {
+                    padding: 0 10px;
+
+                    a {
+                        font-size: 18px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 5px;
+                        margin-right: 5px;
+                        color: var(--futureart-1);
+
+                        &:hover {
+                            background-color: var(--futureart-1);
+                            color: var(--futureart-6);
+                            animation: pulse-1 1s ease infinite;
+                        }
+                    }
+
+                    @keyframes pulse-1 {
+                        0% {
+                            box-shadow: 0 0 0 0 var(--futureart-1);
+                        }
+
+                        80% {
+                            box-shadow: 0 0 0 10px rgba(254, 134, 134, 0);
+                        }
+
+                        100% {
+                            box-shadow: 0 0 0 0 rgba(254, 134, 134, 0);
+                        }
+
+                    }
+                }
+
+                .top-nav-lang {
+                    padding: 0 15px;
+                    padding-right: 0;
+                    border-left: 1px solid var(--black-1);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    a {
+                        text-decoration: underline;
+                        font-size: 18px;
+                        color: var(--black-9);
+                        font-weight: 400;
+                        margin-right: 15px;
+
+                        &.active {
+                            color: var(--futureart-1);
+                        }
+                    }
+                }
+            }
+
+            .bottom {
+                margin-top: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+
+                .row {
+                    width: 100%;
+                }
+
+                .links{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    a{
+                        color: var(--black-9);
+                        position: relative;
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            left: 0 ;
+                            bottom: -10%;
+                            width: 100%;
+                            height: 1px;
+                            transition: 0.3s;
+                            transform: scaleX(0);
+                            background-color: transparent;
+                        }
+                        &::after{
+                            transform: scale(1);
+                            width: 0;
+                        }
+
+                        &:hover{
+                            color: var(--futureart-1);
+                            &::after{
+                                background-color: var(--futureart-1);
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    @media only screen and (min-width:1200px) {
+                    a{
+                        font-size: 18px;
+                    }                        
+                    }
+                }
+            }
+        }
+    }
+}
