@@ -5,6 +5,7 @@
     --futureart-4:#b65299;
     --futureart-5:#f1f1f1;
     --futureart-6:#fff;
+    --futureart-7:#ededed;
     --black-1: rgba(0,0,0,0.1);
     --black-9: rgba(0,0,0,0.9);
 
@@ -54,4 +55,15 @@ body{
         font-size: 30px;
         margin-right: 25px;
     }
+}
+.col-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-end{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
