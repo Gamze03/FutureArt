@@ -6,6 +6,7 @@
     --futureart-5:#f1f1f1;
     --futureart-6:#fff;
     --futureart-7:#ededed;
+    --black-0:#000;
     --black-1: rgba(0,0,0,0.1);
     --black-9: rgba(0,0,0,0.9);
 
@@ -40,6 +41,22 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    a{
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 5px;
+        margin-right: 5px;
+        color: var(--futureart-1);
+        &:hover {
+            background-color: var(--futureart-1);
+            color: var(--futureart-6);
+            animation: pulse-1 1s ease infinite;
+        }
+    }
 }
 .br-icons{
     width: 100%;
@@ -52,6 +69,7 @@ body{
     }
 
     .search-button{
+        color: var(--futureart-1);
         font-size: 30px;
         margin-right: 25px;
     }
@@ -64,6 +82,14 @@ body{
 
 .col-end{
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: flex-end;
+}
+.swiper{
+    width: 100%;
+}
+.swiper-slide{
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
