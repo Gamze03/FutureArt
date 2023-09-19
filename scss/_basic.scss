@@ -6,8 +6,10 @@
     --futureart-5:#f1f1f1;
     --futureart-6:#fff;
     --futureart-7:#ededed;
+    --futureart-8:#f1f1f1;
     --black-0:#000;
     --black-1: rgba(0,0,0,0.1);
+    --black-5:rgba(0,0,0,0.5);
     --black-9: rgba(0,0,0,0.9);
 
 }
@@ -92,4 +94,29 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+section{
+    width: 100%;
+    margin-bottom: 30px;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.section-title{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 25px;
+    font-weight: 500;
+    img{
+        width: 72px;
+    }
+    span{
+        font-size: 25px;
+        font-weight: 500;
+    }
 }

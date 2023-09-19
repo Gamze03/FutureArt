@@ -12,6 +12,69 @@ section.banner{
         height: 100%;
         object-fit: cover;
         min-height: 80vh;
+        @media only screen and (max-width:576px) {
+            min-height: 150vh;
+        }
     }
- 
+
+    .banner-swiper{
+        z-index: 0;
+    }
+    .content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        color: var(--futureart-6);
+        padding: 50px 25px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        height: 100%;
+        .title{
+            text-align: center;
+            color: var(--futureart-6);
+            font-size: 28px;
+            margin-bottom: 40px;
+            @media only screen and (min-width:576px) {
+                font-size: 36px;
+                font-weight: 600;
+            }
+        }
+
+        .text{
+            max-width: 1000px;
+            text-align: center;
+            color: var(--futureart-6);
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+    }
+
+}
+.about-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    padding: 15px;
+    margin: 15px 0;
+    border: 2px solid var(--futureart-6);
+    border-radius: 10px;
+    background-color: transparent;
+    width: 100%;
+    min-width: 120px;
+    max-width: 210px;
+    position: relative;
+    transition: all .2s;
+    span{
+        color: var(--futureart-6);
+        font-size: 18px;
+        font-weight: 500;
+        z-index: 3;
+    }
 }
