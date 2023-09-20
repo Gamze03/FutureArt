@@ -40,3 +40,25 @@ const ProjectSwiper = new Swiper(".project-swiper", {
     }
     }
 );
+
+const VideoSwiper = new Swiper(".video-swiper", {
+    slidesPerView: 1,
+    speed: 1000,
+    loop: true,
+    autoplay: {
+        delay: 2000,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+
+        },
+    }
+    }
+);

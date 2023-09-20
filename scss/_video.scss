@@ -1,0 +1,62 @@
+.video-item{
+    width: 100%;
+    max-width: 360px;
+    max-height: 340px;
+    position:relative;
+    &:hover .hover-div{
+        background-color: rgba(107,71,150,0.5);
+    }
+    @media only screen and (min-width:768px) {
+        max-width: 450px;
+        
+    }
+    img{
+        max-height:340px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hover-div{
+        width: 100%;
+        height: 100%;
+        position: absolute ;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(107,71,150,0.2);
+    }
+    
+    a.play-button{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 3px solid var(--futureart-6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media only screen and (min-width:768px) {
+            width: 80px;
+            height: 80px;
+        }
+        &:hover i{
+            color: var(--futureart-1);
+                 
+             }
+        i{
+            font-size: 26px;
+            color: var(--futureart-6);
+            @media only screen and (min-width:768px) {
+                font-size: 35px;
+                
+            }
+          
+        }
+        &:hover{
+            transform: scale(1.2);
+            background-color: var(--futureart-6);
+        }
+    }
+}

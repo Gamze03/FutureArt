@@ -1,0 +1,65 @@
+section.counter{
+    background-image: url(/futureart-image/background/counter-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--futureart-8);
+}
+.counters-wrapper{
+    width: 100%;
+    min-height: 380px;
+    padding: 50px 0;
+    color: var(--futureart-6);
+    .col-12{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .counter-item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+        border-radius: 5px;
+
+        .counter-span{
+            font-size: 45px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        .name{
+            font-size: 22px;
+            font-weight: 500;
+        }
+        &:hover{
+            background-color: var(--futureart-6);
+            color: var(--futureart-1);
+        }
+    }
+}
+.pdf-download-icon{
+    color: var(--futureart-6);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px; 
+    @media only screen and (min-width:768px) {
+        font-size: 60px;
+    }
+    i{
+        margin-bottom: 20px;
+        font-size: 55px;
+    }
+
+    span{
+        font-size: 22px;
+        font-weight: 500;
+    }
+    &:hover{
+        background-color: var(--futureart-6);
+        color: var(--futureart-1);
+    }
+}

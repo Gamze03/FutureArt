@@ -50,16 +50,15 @@ section.service{
         margin-bottom: 15px;
         img{
             object-fit: contain;
+            margin-bottom: 15px;
+            
             &:last-child{
                 display: none;
             }
          
         }
     }
-    .normal-logo, .white-logo{
-        object-fit: contain;
-        margin-bottom: 15px;
-    }
+   
     .title{
         font-size: 18px;
         font-weight: 600;
@@ -84,4 +83,19 @@ section.service{
             }
         }
     }
+}
+.swiper-pagination {
+    bottom: 0;
+}
+
+.swiper-pagination-bullet {
+    min-width: 12px;
+    min-height: 12px;
+    border-radius: 50%;
+    background-color:var(--futureart-1);
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
 }

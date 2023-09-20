@@ -90,6 +90,7 @@ body {
 
 .swiper {
   width: 100%;
+  padding-bottom: 50px;
 }
 
 .swiper-slide {
@@ -124,6 +125,35 @@ section .container {
   font-weight: 500;
 }
 
+.page-scroll-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--futureart-1);
+  color: var(--futureart-6);
+  border: 1px solid var(--futureart-6);
+  border-radius: 5px;
+  font-size: 20px;
+  z-index: 99;
+  animation: scroll 1s ease forwards;
+}
+
+@keyframes scroll {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 header {
   width: 100%;
 }
@@ -727,14 +757,10 @@ section.service .title-col {
 .service-card .icon img {
   -o-object-fit: contain;
      object-fit: contain;
+  margin-bottom: 15px;
 }
 .service-card .icon img:last-child {
   display: none;
-}
-.service-card .normal-logo, .service-card .white-logo {
-  -o-object-fit: contain;
-     object-fit: contain;
-  margin-bottom: 15px;
 }
 .service-card .title {
   font-size: 18px;
@@ -760,6 +786,22 @@ section.service .title-col {
 }
 .service-card:hover img:last-child {
   display: inline-block;
+}
+
+.swiper-pagination {
+  bottom: 0;
+}
+
+.swiper-pagination-bullet {
+  min-width: 12px;
+  min-height: 12px;
+  border-radius: 50%;
+  background-color: var(--futureart-1);
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
 }
 
 section.project {
@@ -825,4 +867,136 @@ section.project .section-title {
   font-weight: 600;
   position: absolute;
   transform: translateY(70px);
+}
+
+.video-item {
+  width: 100%;
+  max-width: 360px;
+  max-height: 340px;
+  position: relative;
+}
+.video-item:hover .hover-div {
+  background-color: rgba(107, 71, 150, 0.5);
+}
+@media only screen and (min-width: 768px) {
+  .video-item {
+    max-width: 450px;
+  }
+}
+.video-item img {
+  max-height: 340px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.video-item .hover-div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(107, 71, 150, 0.2);
+}
+.video-item a.play-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid var(--futureart-6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (min-width: 768px) {
+  .video-item a.play-button {
+    width: 80px;
+    height: 80px;
+  }
+}
+.video-item a.play-button:hover i {
+  color: var(--futureart-1);
+}
+.video-item a.play-button i {
+  font-size: 26px;
+  color: var(--futureart-6);
+}
+@media only screen and (min-width: 768px) {
+  .video-item a.play-button i {
+    font-size: 35px;
+  }
+}
+.video-item a.play-button:hover {
+  transform: scale(1.2);
+  background-color: var(--futureart-6);
+}
+
+section.counter {
+  background-image: url(/futureart-image/background/counter-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--futureart-8);
+}
+
+.counters-wrapper {
+  width: 100%;
+  min-height: 380px;
+  padding: 50px 0;
+  color: var(--futureart-6);
+}
+.counters-wrapper .col-12 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.counters-wrapper .counter-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+}
+.counters-wrapper .counter-item .counter-span {
+  font-size: 45px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.counters-wrapper .counter-item .name {
+  font-size: 22px;
+  font-weight: 500;
+}
+.counters-wrapper .counter-item:hover {
+  background-color: var(--futureart-6);
+  color: var(--futureart-1);
+}
+
+.pdf-download-icon {
+  color: var(--futureart-6);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+@media only screen and (min-width: 768px) {
+  .pdf-download-icon {
+    font-size: 60px;
+  }
+}
+.pdf-download-icon i {
+  margin-bottom: 20px;
+  font-size: 55px;
+}
+.pdf-download-icon span {
+  font-size: 22px;
+  font-weight: 500;
+}
+.pdf-download-icon:hover {
+  background-color: var(--futureart-6);
+  color: var(--futureart-1);
 }/*# sourceMappingURL=style.css.map */
