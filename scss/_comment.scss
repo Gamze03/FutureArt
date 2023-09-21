@@ -1,0 +1,93 @@
+section.comment{
+    background:url(/futureart-image/background/comment-design.png);
+    background-repeat: no-repeat;
+    background-color:var(--futureart-8);
+    background-position: center left;
+    padding: 40px 0;
+    .section-title{
+        margin-bottom: 30px;
+    }
+}
+.comment-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 560px;
+    @media only screen and (min-width:992px){
+        align-items: flex-start;
+        
+    }
+    .content{
+        width: 100%;
+        padding: 25px;
+        background-color: var(--futureart-6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 5px;
+        position: relative;
+        margin-bottom: 55px;
+        @media only screen and (min-width:992px){
+            align-items: flex-start;
+            
+        }
+
+        .name{
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            text-align: center;
+            @media only screen and (min-width:992px){
+                text-align: start;
+                
+            }
+        }
+        .stars{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            img{
+                margin-right: 5px;
+            }
+        }
+
+        .text{
+            font-size: 14px;
+            text-align: center;
+            @media only screen and (min-width:992px){
+                text-align: start;
+            }
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 45px solid var(--futureart-6);
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+
+            @media only screen and (min-width:992px){
+                left: 60px;
+                transform: translateX(0);
+                
+            }
+        }
+    }
+
+    .user-image{
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        @media only screen and (min-width:992px){
+            transform: translateX(78px);
+            
+        }
+    }
+}

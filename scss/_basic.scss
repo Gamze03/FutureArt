@@ -138,6 +138,7 @@ section{
     font-size: 20px;
     z-index: 99;
     animation: scroll 1s ease forwards;
+    cursor: pointer;
 }
 @keyframes scroll {
     0%{
@@ -152,3 +153,26 @@ section{
         transform: scale(1);
     }
 }
+
+.swiper-pagination {
+    bottom: 0;
+}
+
+.swiper-pagination-bullet {
+    min-width: 12px;
+    min-height: 12px;
+    border-radius: 50%;
+    background-color:var(--futureart-1);
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.section-title{
+    &:hover{
+        color: var(--futureart-1);
+    }
+}
+

@@ -28,6 +28,8 @@ if (document.querySelector(".counter-span")) {
           valueDisplays.textContent = startValue;
           if (startValue == endValue) {
             clearInterval(counter);
+            valueDisplays.textContent =
+            valueDisplays.getAttribute("data-val") +"+";
           }
         }
       }, duration);

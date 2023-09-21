@@ -1,0 +1,40 @@
+section.contact{
+    padding: 20px 0 40px;
+    .general-row{
+        width: 100%;
+        @media only screen and (min-width:992px) {
+            flex-direction: row-reverse;
+            
+        }
+        .col-12{
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media only screen and (min-width:992px) {
+                    align-items: flex-start;
+            }
+        }
+    }
+
+}
+.addres-row{
+    width: 100%;
+}
+
+@keyframes addres {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.addres-swiper img{
+    width: 100%;
+    max-width: 400px;
+    object-fit: contain;
+}
