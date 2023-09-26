@@ -8,8 +8,10 @@
   --futureart-6:#fff;
   --futureart-7:#ededed;
   --futureart-8:#f1f1f1;
+  --futureart-9:#f3f3f3;
   --black-0:#000;
   --black-1: rgba(0,0,0,0.1);
+  --black-3: rgba(0,0,0,0.3);
   --black-5:rgba(0,0,0,0.5);
   --black-9: rgba(0,0,0,0.9);
 }
@@ -173,6 +175,31 @@ section .container {
 
 .section-title:hover {
   color: var(--futureart-1);
+}
+
+@keyframes adres {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes adress-menu {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.fixed-top {
+  background-color: var(--futureart-6);
+  width: 100%;
 }
 
 header {
@@ -1117,11 +1144,7 @@ section.contact .general-row .col-12 {
   }
 }
 
-.addres-row {
-  width: 100%;
-}
-
-@keyframes addres {
+@keyframes adres {
   0% {
     transform: scale(0);
     opacity: 0;
@@ -1131,9 +1154,151 @@ section.contact .general-row .col-12 {
     opacity: 1;
   }
 }
-.addres-swiper img {
+.contact-swiper img {
   width: 100%;
   max-width: 400px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.contact-swiper {
+  border: 1px solid transparent;
+  padding-bottom: 0;
+}
+
+.navigation-button {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  z-index: 999;
+  color: #fff;
+  font-size: 22px;
+}
+.navigation-button .dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 15px;
+}
+
+.adress-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .adress-content {
+    align-items: flex-start;
+    padding: 0 25px;
+  }
+}
+.adress-content .title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+.adress-content .links-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+@media only screen and (min-width: 768px) {
+  .adress-content .links-wrapper {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .adress-content .links-wrapper span {
+    min-width: 80px;
+  }
+}
+.adress-content a {
+  color: var(--black-0);
+  text-align: center;
+  margin-bottom: 5px;
+}
+@media only screen and (min-width: 768px) {
+  .adress-content a {
+    color: var(--black-0);
+    text-align: center;
+    margin-bottom: 5px;
+  }
+}
+.adress-content .links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .adress-content .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.dropdown-col {
+  margin-bottom: 15px;
+}
+@media only screen and (min-width: 768px) {
+  .dropdown-col {
+    justify-content: flex-start;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .dropdown-col {
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+}
+
+.contact-dropdown {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  min-width: 140px;
+  background-color: var(--futureart-9);
+}
+.contact-dropdown .active-button {
+  background-color: var(--futureart-9);
+  padding: 10px 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+.contact-dropdown .adress-menu {
+  background-color: var(--futureart-9);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  padding: 10px 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation: adress-menu 0.3s ease forwards;
+}
+.contact-dropdown .adress-menu button {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--black-3);
+  font-size: 14px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
 }/*# sourceMappingURL=style.css.map */

@@ -50,3 +50,38 @@ window.addEventListener("scroll", function () {
 scrollButton.addEventListener("click", () => {
   window.scrollTo(0, 0);
 });
+
+let pageLinksWrapper = document.querySelectorAll('.page-links');
+let sections = document.querySelectorAll('section');
+let mainSections = Array.from(sections).filter((section) => section.getAttribute('data-scroll') === 'true');
+
+pageLinksWrapper.forEach((wrapper) => {
+    let links = wrapper.querySelectorAll('a');
+    links.forEach((link, index) => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            let position = mainSections[index].offsetTop - 110;
+            window.scrollTo(0, position);
+            for(let i = 0; i < links.length; i++){
+                links[i].classList.remove('active')
+            }
+            link.classList.add('active')
+        })
+    })
+})
+
+// let scrollButton = document.querySelector(".page-scroll-button");
+// let bottom = document.querySelector(".bottom");
+// window.addEventListener("scroll", function () {
+//     if (this.scrollY > 300) {
+//         bottom.classList.add("fixed-top");
+//         scrollButton.classList.remove("d-none");
+//     } else {
+//         bottom.classList.remove("fixed-top");
+//         scrollButton.classList.add("d-none");
+//     }
+// });
+
+// scrollButton.addEventListener("click", () => {
+//     window.scrollTo(0, 0);
+// });

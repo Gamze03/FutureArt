@@ -85,22 +85,29 @@ const CommentSwiper = new Swiper(".comment-swiper", {
     }
 );
 
-const AddresSwiper = new Swiper(".addres-swiper", {
+const ContactSwiper = new Swiper(".contact-swiper", {
     slidesPerView: 1,
     speed: 1000,
-    loop: true,
-    autoplay: {
-        delay: 2000,
-    },
+    // loop: true,
+    // autoplay: {
+    //     delay: 2000,
+    // },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
     },
+
+    navigation: {
+        prevEl: ".custom-prev-button",
+        nextEl: ".custom-next-button",
+       
+    },
+
     breakpoints: {
 
         1024: {
-            slidesPerView: 2,
-            spaceBetween: 40,
+            slidesPerView: 1,
+            spaceBetween: 20,
 
         },
     }

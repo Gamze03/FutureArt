@@ -7,8 +7,10 @@
     --futureart-6:#fff;
     --futureart-7:#ededed;
     --futureart-8:#f1f1f1;
+    --futureart-9:#f3f3f3;
     --black-0:#000;
     --black-1: rgba(0,0,0,0.1);
+    --black-3: rgba(0,0,0,0.3);
     --black-5:rgba(0,0,0,0.5);
     --black-9: rgba(0,0,0,0.9);
 
@@ -176,3 +178,29 @@ section{
     }
 }
 
+@keyframes adres {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes adress-menu {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }
+  .fixed-top{
+    background-color: var(--futureart-6);
+    width: 100%;
+  }
+ 
