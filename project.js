@@ -38,18 +38,20 @@ if (document.querySelector(".counter-span")) {
 
 
 
-let scrollButton = document.querySelector(".page-scroll-button");
-window.addEventListener("scroll", function () {
-  if (this.scrollY > 300) {
-    scrollButton.classList.remove("d-none");
-  } else {
-    scrollButton.classList.add("d-none");
-  }
-});
+// let scrollButton = document.querySelector(".page-scroll-button");
+// window.addEventListener("scroll", function () {
+//   if (this.scrollY > 300) {
+//     scrollButton.classList.remove("d-none");
+//   } else {
+//     scrollButton.classList.add("d-none");
+//   }
+// });
 
-scrollButton.addEventListener("click", () => {
-  window.scrollTo(0, 0);
-});
+// scrollButton.addEventListener("click", () => {
+//   window.scrollTo(0, 0);
+// });
+
+
 
 let pageLinksWrapper = document.querySelectorAll('.page-links');
 let sections = document.querySelectorAll('section');
@@ -70,18 +72,66 @@ pageLinksWrapper.forEach((wrapper) => {
     })
 })
 
-// let scrollButton = document.querySelector(".page-scroll-button");
-// let bottom = document.querySelector(".bottom");
-// window.addEventListener("scroll", function () {
-//     if (this.scrollY > 300) {
-//         bottom.classList.add("fixed-top");
-//         scrollButton.classList.remove("d-none");
-//     } else {
-//         bottom.classList.remove("fixed-top");
-//         scrollButton.classList.add("d-none");
-//     }
-// });
+let scrollButton = document.querySelector(".page-scroll-button");
+let header = document.querySelector("header");
+window.addEventListener("scroll", function () {
+    if (this.scrollY > 300) {
+        header.classList.add("fixed-top");
+        scrollButton.classList.remove("d-none");
+       
+    } else {
+        header.classList.remove("fixed-top");
+        scrollButton.classList.add("d-none");
+       
+    }
+});
 
-// scrollButton.addEventListener("click", () => {
-//     window.scrollTo(0, 0);
-// });
+scrollButton.addEventListener("click", () => {
+    window.scrollTo(0, 0);
+});
+
+
+
+
+
+
+let contactDropdown = document.querySelector(".contact-dropdown");
+let adressMenu = document.querySelector(".contact-dropdown .adress-menu");
+let adressButtons = document.querySelectorAll(".contact-dropdown .adress-menu button");
+let activeAdressSpan = document.querySelector(".contact-dropdown .active-button span");
+let adressRows = document.querySelectorAll(".adress-row");
+
+activeAdressSpan.innerHTML = adressButtons[0].innerHTML;
+adressRows[0].classList.remove("d-none");
+adressButtons[0].classList.add("d-none");
+
+contactDropdown.addEventListener("mousemove",function (){
+  adressMenu.classList.remove("d-none");
+});
+
+contactDropdown.addEventListener("mouseleave",function (){
+  adressMenu.classList.add("d-none");
+});
+
+adressButtons.forEach((button) => {
+  button.addEventListener("click",function () {
+    let id = button.getAttribute ('data-id');
+    activeAdressSpan.innerHTML = button.innerHTML;
+    for(let i = 0; i < adressButtons.length; i++){
+      adressButtons[i].classList.remove('d-none')
+    }
+    button.classList.add('d-none')
+    for(let i = 0;i < adressRows.length; i++){
+      adressRows[i].classList.add('d-none');
+    }
+
+    // let activeRow = Array.from(adressRows).find((Row) =>row.getAttribute('data-id') == row.getAttribute('data-id') == id);
+    let activeRow =document.querySelector('adress-row[data-id="$(id)"]')
+    activeRow.classList.remove ('d-none');
+
+
+  })
+}
+)
+
+
