@@ -100,4 +100,7 @@ footer{
             font-weight: 600;
         }
     }
+    .social-icons a::after{
+        display: none;
+    }
 }

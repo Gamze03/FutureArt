@@ -74,14 +74,19 @@ pageLinksWrapper.forEach((wrapper) => {
 
 let scrollButton = document.querySelector(".page-scroll-button");
 let header = document.querySelector("header");
+let headerTop=document.querySelector("header .top")
 window.addEventListener("scroll", function () {
     if (this.scrollY > 300) {
         header.classList.add("fixed-top");
         scrollButton.classList.remove("d-none");
+        headerTop.classList.add("d-none");
+        mobileNavbar.classList.add("fixed-top");
        
     } else {
-        header.classList.remove("fixed-top");
+       header.classList.remove("fixed-top");
         scrollButton.classList.add("d-none");
+        headerTop.classList.remove("d-none");
+        mobileNavbar.classList.remove("fixed-top");
        
     }
 });
@@ -126,8 +131,8 @@ adressButtons.forEach((button) => {
     }
 
     // let activeRow = Array.from(adressRows).find((Row) =>row.getAttribute('data-id') == row.getAttribute('data-id') == id);
-    let activeRow =document.querySelector('adress-row[data-id="$(id)"]')
-    activeRow.classList.remove ('d-none');
+    let activeRow =document.querySelector(`.adress-row[data-id="${id}"]`)
+    activeRow.classList.remove('d-none');
 
 
   })

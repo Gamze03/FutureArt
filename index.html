@@ -106,7 +106,7 @@
             </div>
         </nav>
 
-        <nav class="mobile-header d-lg-none">
+        <nav class="mobile-header d-lg-none fixed-top">
             <div class="container">
                 <div class="row">
                     <div class="col-6 col-start">
@@ -139,67 +139,64 @@
 
                             <button class="menu-button m-right" type="button" data-bs-toggle="offcanvas"
                                 data-bs-target="#mobile-menu"><i class="fa-solid fa-bars"></i></button>
-
-                            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="mobile-menu">
-                                <div class="offcanvas-header">
-                                    <a href="" class="header-logo">
-                                        <img src="./futureart-image/logo/future-art-logo.png" alt="">
-                                    </a>
-                                    <button type="button" class="close-button" data-bs-dismiss="offcanvas">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </button>
-
-                                </div>
-                                <div class="offcanvas-body">
-                                    <div class="canvas-links page-navigation">
-                                        <a href="">Haqqımızda</a>
-                                        <a href=""> Xidmətlərimiz</a>
-                                        <a href="">Layihələrimiz</a>
-                                        <a href="">Referanslar</a>
-                                        <a href="">Əlaqə</a>
-                                    </div>
-                                    <div class="social-icons">
-                                        <a href="">
-                                            <i class="fa-brands fa-facebook-f"></i>
-                                        </a>
-
-                                        <a href="">
-                                            <i class="fa-brands fa-linkedin-in"></i>
-                                        </a>
-
-                                        <a href="">
-                                            <i class="fa-brands fa-twitter"></i>
-                                        </a>
-
-                                        <a href="">
-                                            <i class="fa-brands fa-instagram"></i>
-                                        </a>
-
-                                        <a href="">
-                                            <i class="fa-brands fa-youtube"></i>
-                                        </a>
-                                    </div>
-
-                                    <div class="canvas-links">
-                                        <a href="">
-                                            <i class="fa-solid fa-phone"></i>
-                                            <span>*1111</span>
-                                        </a>
-
-                                        <a href="">
-                                            <i class="fa-solid fa-phone"></i>
-                                            <span>(055) 222 66 88</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-
                         </div>
                     </div>
                 </div>
             </div>
         </nav>
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="mobile-menu"> 
+            <div class="offcanvas-header">
+                <a href="" class="header-logo">
+                    <img src="./futureart-image/logo/future-art-logo.png" alt="">
+                </a>
+                <button type="button" class="close-button" data-bs-dismiss="offcanvas">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+            <div class="offcanvas-body">
+                <div class="canvas-links page-navigation">
+                    <a href="">Haqqımızda</a>
+                    <a href=""> Xidmətlərimiz</a>
+                    <a href="">Layihələrimiz</a>
+                    <a href="">Referanslar</a>
+                    <a href="">Əlaqə</a>
+                </div>
+                <div class="social-icons">
+                    <a href="">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+
+                <div class="canvas-links">
+                    <a href="">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>*1111</span>
+                    </a>
+
+                    <a href="">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>(055) 222 66 88</span>
+                    </a>
+                </div>
+            </div>
+        </div> 
     </header>
 
     <main>
@@ -741,20 +738,20 @@
                             </button>
 
                             <div class="adress-menu d-none">
-                                <button class="active"> Ankara Mərkəz Ofis </button>
-                                <button>İstanbul Teknik Ofis</button>
-                                <button>Baku Ofis</button>
-                                <button>Londra Ofis</button>
-                                <button>Frankurt Ofis</button>
-                                <button>Sofiya Ofis</button>
-                                <button>Balıkesir Ofis</button>
+                                <button data-id="1" class="active"> Ankara Mərkəz Ofis </button>
+                                <button data-id="2">İstanbul Teknik Ofis</button>
+                                <button data-id="3">Baku Ofis</button>
+                                <button data-id="4">Londra Ofis</button>
+                                <button data-id="5">Frankurt Ofis</button>
+                                <button data-id="6">Sofiya Ofis</button>
+                                <button data-id="7">Balıkesir Ofis</button>
                             </div>
                         </div>
 
                     </div>
 
                     <div class="col-12 col-lg-8">
-                        <div class="row adress-row w-100">
+                        <div class="row adress-row w-100 d-none" data-id="1">
                             <div class="col-12 col-md-6">
                                 <div class="swiper contact-swiper">
                                     <div class="swiper-wrapper">
@@ -791,6 +788,386 @@
                                 <div class="adress-content">
                                     <div class="title">
                                         <p>Ankara Mərkəz Ofis</p>
+                                    </div>
+                                    <div class="links-wrapper">
+                                        <span>Ünvan:</span>
+                                        <div class="links">
+                                            <a href=""> Bakı şəh, Nərimanov ray. 12a</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="links-wrapper">
+                                        <span>Tel:</span>
+                                        <div class="links">
+                                            <a href=""> (050) 555 34 21</a>
+                                            <a href=""> (012) 456 78 90</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="links-wrapper">
+                                        <span>Mail:</span>
+                                        <div class="links">
+                                            <a href="">merkez@future.az</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row adress-row w-100 d-none" data-id="2">
+                            <div class="col-12 col-md-6">
+                                <div class="swiper contact-swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="navigation-button">
+                                        <div class="custom-prev-button">
+                                            <i class="fa-solid fa-chevron-left"></i>
+                                        </div>
+                                        <div class="dot"></div>
+                                        <div class="custom-next-button">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <div class="adress-content">
+                                    <div class="title">
+                                        <p>Istanbul Teknik Ofis</p>
+                                    </div>
+                                    <div class="links-wrapper">
+                                        <span>Ünvan:</span>
+                                        <div class="links">
+                                            <a href=""> Bakı şəh, Nərimanov ray. 12a</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="links-wrapper">
+                                        <span>Tel:</span>
+                                        <div class="links">
+                                            <a href=""> (050) 555 34 21</a>
+                                            <a href=""> (012) 456 78 90</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="links-wrapper">
+                                        <span>Mail:</span>
+                                        <div class="links">
+                                            <a href="">merkez@future.az</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row adress-row w-100 d-none" data-id="3">
+                            <div class="col-12 col-md-6">
+                                <div class="swiper contact-swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="navigation-button">
+                                        <div class="custom-prev-button">
+                                            <i class="fa-solid fa-chevron-left"></i>
+                                        </div>
+                                        <div class="dot"></div>
+                                        <div class="custom-next-button">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <div class="adress-content">
+                                    <div class="title">
+                                        <p>Londra Ofis</p>
+                                    </div>
+                                    <div class="links-wrapper">
+                                        <span>Ünvan:</span>
+                                        <div class="links">
+                                            <a href=""> Bakı şəh, Nərimanov ray. 12a</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="links-wrapper">
+                                        <span>Tel:</span>
+                                        <div class="links">
+                                            <a href=""> (050) 555 34 21</a>
+                                            <a href=""> (012) 456 78 90</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="links-wrapper">
+                                        <span>Mail:</span>
+                                        <div class="links">
+                                            <a href="">merkez@future.az</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row adress-row w-100 d-none" data-id="4">
+                            <div class="col-12 col-md-6">
+                                <div class="swiper contact-swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="navigation-button">
+                                        <div class="custom-prev-button">
+                                            <i class="fa-solid fa-chevron-left"></i>
+                                        </div>
+                                        <div class="dot"></div>
+                                        <div class="custom-next-button">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <div class="adress-content">
+                                    <div class="title">
+                                        <p>Frankurt Ofis</p>
+                                    </div>
+                                    <div class="links-wrapper">
+                                        <span>Ünvan:</span>
+                                        <div class="links">
+                                            <a href=""> Bakı şəh, Nərimanov ray. 12a</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="links-wrapper">
+                                        <span>Tel:</span>
+                                        <div class="links">
+                                            <a href=""> (050) 555 34 21</a>
+                                            <a href=""> (012) 456 78 90</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="links-wrapper">
+                                        <span>Mail:</span>
+                                        <div class="links">
+                                            <a href="">merkez@future.az</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row adress-row w-100 d-none" data-id="5">
+                            <div class="col-12 col-md-6">
+                                <div class="swiper contact-swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="navigation-button">
+                                        <div class="custom-prev-button">
+                                            <i class="fa-solid fa-chevron-left"></i>
+                                        </div>
+                                        <div class="dot"></div>
+                                        <div class="custom-next-button">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <div class="adress-content">
+                                    <div class="title">
+                                        <p>Sofya Ofis</p>
+                                    </div>
+                                    <div class="links-wrapper">
+                                        <span>Ünvan:</span>
+                                        <div class="links">
+                                            <a href=""> Bakı şəh, Nərimanov ray. 12a</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="links-wrapper">
+                                        <span>Tel:</span>
+                                        <div class="links">
+                                            <a href=""> (050) 555 34 21</a>
+                                            <a href=""> (012) 456 78 90</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="links-wrapper">
+                                        <span>Mail:</span>
+                                        <div class="links">
+                                            <a href="">merkez@future.az</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row adress-row w-100 d-none" data-id="6">
+                            <div class="col-12 col-md-6">
+                                <div class="swiper contact-swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="navigation-button">
+                                        <div class="custom-prev-button">
+                                            <i class="fa-solid fa-chevron-left"></i>
+                                        </div>
+                                        <div class="dot"></div>
+                                        <div class="custom-next-button">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <div class="adress-content">
+                                    <div class="title">
+                                        <p>Balıkesir Ofis</p>
+                                    </div>
+                                    <div class="links-wrapper">
+                                        <span>Ünvan:</span>
+                                        <div class="links">
+                                            <a href=""> Bakı şəh, Nərimanov ray. 12a</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="links-wrapper">
+                                        <span>Tel:</span>
+                                        <div class="links">
+                                            <a href=""> (050) 555 34 21</a>
+                                            <a href=""> (012) 456 78 90</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="links-wrapper">
+                                        <span>Mail:</span>
+                                        <div class="links">
+                                            <a href="">merkez@future.az</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row adress-row w-100 d-none" data-id="7">
+                            <div class="col-12 col-md-6">
+                                <div class="swiper contact-swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <img src="./futureart-image/contact/img-1.png" alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="navigation-button">
+                                        <div class="custom-prev-button">
+                                            <i class="fa-solid fa-chevron-left"></i>
+                                        </div>
+                                        <div class="dot"></div>
+                                        <div class="custom-next-button">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <div class="adress-content">
+                                    <div class="title">
+                                        <p>Baku Ofis</p>
                                     </div>
                                     <div class="links-wrapper">
                                         <span>Ünvan:</span>

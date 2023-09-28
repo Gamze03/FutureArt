@@ -87,6 +87,7 @@ section.contact {
         font-weight: 500;
         margin-bottom: 15px;
         margin-top: 10px;
+        
     }
 
     .links-wrapper {
@@ -187,6 +188,9 @@ section.contact {
             width: 100%;
             display: flex;
             justify-content: flex-start;
+            &:hover{
+                color: var(--futureart-1);
+            }
         }
     }
 }
